@@ -6,7 +6,6 @@ const MiLista = () => {
     const url = "https://assets.breatheco.de/apis/fake/todos/user/joselorant";
     const [lista, setLista] = useState([])
     const [input, setInput] = useState("")
-    const cosa = "azul";
 
     useEffect(() => {
         getFetch(url);
@@ -115,7 +114,6 @@ const MiLista = () => {
                 <form className='form' onSubmit={(e) => recarga(e)} >
                     <input className='input' type='Text' placeholder="Escribe Aqui..."
                         onChange={(e) => setInput(e.target.value)} value={input} />
-                    <button value={cosa} onClick= {(e) => setInput(cosa)}></button>
                 </form>
                 <button className='btn' onClick={(e) => eliminarTodo(e)}>Borrar Todo</button>
                 {lista.map((Contenid, i) => (
