@@ -6,7 +6,6 @@ const MiLista = () => {
     const url = "https://assets.breatheco.de/apis/fake/todos/user/joselorant";
     const [lista, setLista] = useState([])
     const [input, setInput] = useState("")
-
     useEffect(() => {
         getFetch(url);
     }, [])
